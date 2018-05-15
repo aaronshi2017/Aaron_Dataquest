@@ -1,0 +1,58 @@
+Install apt-cyg in cygwin:
+
+go to /bin/
+svn --force export https://github.com/transcode-open/apt-cyg /bin/
+ls -al /bin/apt-cyg to see if it is copied there
+otherwise move to /bin/
+chmod a+x apt-cyg 
+test installing package:
+=========================
+aaron@AaronEnvy /bin
+$ apt-cyg install curl
+Installing curl
+--2018-05-15 00:47:23--  http://cygwin.mirror.constant.com//x86_64/release/curl/curl-7.59.0-1.tar.xz
+Resolving cygwin.mirror.constant.com (cygwin.mirror.constant.com)... 108.61.5.83
+Connecting to cygwin.mirror.constant.com (cygwin.mirror.constant.com)|108.61.5.83|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 321036 (314K) [application/octet-stream]
+Saving to: ‘curl-7.59.0-1.tar.xz’
+
+curl-7.59.0-1.tar.x 100%[===================>] 313.51K  1.16MB/s    in 0.3s
+
+2018-05-15 00:47:23 (1.16 MB/s) - ‘curl-7.59.0-1.tar.xz’ saved [321036/321036]
+
+curl-7.59.0-1.tar.xz: OK
+Unpacking...
+Package curl requires the following packages, installing:
+cygwin libcurl4 libmetalink3 libopenssl100 zlib0
+Package cygwin is already installed, skipping
+Package libcurl4 is already installed, skipping
+Installing libmetalink3
+--2018-05-15 00:47:25--  http://cygwin.mirror.constant.com//x86_64/release/libmetalink/libmetalink3/libmetalink3-0.1.2-1.tar.bz2
+Resolving cygwin.mirror.constant.com (cygwin.mirror.constant.com)... 108.61.5.83
+Connecting to cygwin.mirror.constant.com (cygwin.mirror.constant.com)|108.61.5.83|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 17435 (17K) [application/octet-stream]
+Saving to: ‘libmetalink3-0.1.2-1.tar.bz2’
+
+libmetalink3-0.1.2- 100%[===================>]  17.03K  --.-KB/s    in 0.04s
+
+2018-05-15 00:47:25 (400 KB/s) - ‘libmetalink3-0.1.2-1.tar.bz2’ saved [17435/17435]
+
+libmetalink3-0.1.2-1.tar.bz2: OK
+Unpacking...
+Package libmetalink3 requires the following packages, installing:
+cygwin libexpat1
+Package cygwin is already installed, skipping
+Package libexpat1 is already installed, skipping
+Package libopenssl100 is already installed, skipping
+Package zlib0 is already installed, skipping
+Running /etc/postinstall/zp_adwaita-icon-theme.sh
+Running /etc/postinstall/zp_desktop-file-utils.sh
+Running /etc/postinstall/zp_fontconfig_cache_1.sh
+Running /etc/postinstall/zp_glib2.0.sh
+Running /etc/postinstall/zp_hicolor-icon-theme.sh
+Running /etc/postinstall/zp_man-db.sh
+Running /etc/postinstall/zp_oxygen-icons.sh
+Running /etc/postinstall/zp_shared-mime-info.sh
+Package curl installed
