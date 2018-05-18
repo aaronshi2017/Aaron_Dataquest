@@ -17,6 +17,11 @@ def calculate_major_cat_totals(df):
         counts_dictionary[c]=total
     return counts_dictionary
 
+#another way to do this
+aa_cat_counts=all_ages.pivot_table(index="Major_category",values="Total",aggfunc=np.sum).to_dict()
+rg_cat_counts = recent_grads.pivot_table(index="Major_category",values="Total",aggfunc=np.sum).to_dict()
+
+
 low_wage_proportion=recent_grads["Low_wage_jobs"].sum()/recent_grads["Total"].sum()
 print(low_wage_proportion)
 majors = recent_grads['Major'].unique()
